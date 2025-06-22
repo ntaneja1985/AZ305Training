@@ -205,3 +205,317 @@
 - Http Only cookie prevents against XSS attacks, cross site scripting attacks
 - Persistent cookies donot expire when browser is closed.
   
+## Designing Data Storage Solution for Relational Data.
+- ![alt text](image-118.png)
+- ![alt text](image-119.png)
+- ![alt text](image-120.png)
+- ![alt text](image-121.png)
+- ![alt text](image-122.png)
+- ![alt text](image-123.png)
+- ![alt text](image-124.png)
+- ![alt text](image-125.png)
+- ![alt text](image-126.png)
+- ![alt text](image-127.png)
+- ![alt text](image-128.png)
+- ![alt text](image-129.png)
+- For traffic routing we can use Microsoft Network routing or Internet Routing. 
+- Microsoft Network routing is more secure and fast but costs more money.
+- ![alt text](image-130.png)
+- ![alt text](image-131.png)
+- ![alt text](image-132.png)
+- ![alt text](image-133.png)
+- ![alt text](image-134.png)
+- We can add role assignment conditions also
+- ![alt text](image-135.png)
+- ![alt text](image-136.png)
+- We most commonly interact with storage account through web applications hosted on web servers.
+- Storage Accounts store blobs which are great for storing music/video/images etc.
+- To access storage account data, we have storage access keys.
+- ![alt text](image-137.png)
+- We can also rotate the keys
+- For temporary access we use SAS tokens
+- ![alt text](image-138.png)
+- ![alt text](image-139.png)
+- ![alt text](image-140.png)
+- ![alt text](image-141.png)
+- The signature part of the SAS token ensures that the parameters of the SAS token are not manipulated with.
+
+
+### Stored Access Policies
+- ![alt text](image-142.png)
+- ![alt text](image-143.png)
+- ![alt text](image-144.png)
+- We can associate SAS tokens to the shared access policy
+- ![alt text](image-145.png)
+- We can edit the stored access policy also
+
+### Storage Redundancy in Azure
+- ![alt text](image-146.png)
+- We have synchronous and asynchronous replication of data.
+- ![alt text](image-147.png)
+- Each region usually has 3 zones.
+- ![alt text](image-148.png)
+- ![alt text](image-149.png)
+- ![alt text](image-150.png)
+- ![alt text](image-151.png)
+- ![alt text](image-152.png)
+- ![alt text](image-153.png)
+- ![alt text](image-154.png)
+- ![alt text](image-155.png)
+
+### Object Replication
+- Here we can have data inside a storage account replicate to another storage account
+- ![alt text](image-156.png)
+- ![alt text](image-157.png)
+- ![alt text](image-158.png)
+
+### FileShare Storage
+- Traditionally we would set up a file server which would follow the SMB protocol
+- ![alt text](image-159.png)
+- ![alt text](image-160.png)
+- ![alt text](image-161.png)
+- Premium File Shares are supported only with Premium Storage Accounts
+- We also have ability of Soft Delete for FileShares
+- ![alt text](image-162.png)
+- ![alt text](image-163.png)
+- Earlier port 445 used to be used by hackers a lot. So lot of ISP's block that port. For this purpose we may need to setup site to site or point to site VPN or ExpressRoute to tunnel traffic directly over port 445.
+- ![alt text](image-164.png)
+
+### Working with Blob Storage Management
+- Blob storage is geared towards webservices.
+- It support HTTPS, REST
+- ![alt text](image-165.png)
+
+### Blob Lifecycle Management
+- ![alt text](image-166.png)
+- ![alt text](image-167.png)
+- ![alt text](image-168.png)
+- ![alt text](image-169.png)
+- ![alt text](image-170.png)
+- Restoring from Archive tier can take more than 2 hours
+
+### Relational Databases
+- ![alt text](image-171.png)
+- ![alt text](image-172.png)
+- ![alt text](image-173.png)
+- ![alt text](image-174.png)
+
+### Service Tiers for Azure SQL
+- ![alt text](image-175.png)
+
+
+## Designing for Data Integration
+- Creating an Azure VM with SQL as a relational data storage solution
+- ![alt text](image-176.png)
+- ![alt text](image-177.png)
+- ![alt text](image-178.png)
+- ![alt text](image-179.png)
+- We can assign a DNS name to our SQL Server VM
+- ![alt text](image-180.png)
+- ![alt text](image-181.png)
+- We can create an Azure SQL Database also
+- ![alt text](image-182.png)
+- ![alt text](image-183.png)
+- ![alt text](image-184.png)
+- ![alt text](image-185.png)
+- ![alt text](image-186.png)
+
+## Recommend a data storage solution
+- Azure offers a choice of SQL and NoSQL databases
+- ![alt text](image-187.png)
+- ![alt text](image-188.png)
+- ![alt text](image-189.png)
+- ![alt text](image-190.png)
+- ![alt text](image-191.png)
+- ![alt text](image-192.png)
+- ![alt text](image-193.png)
+- ![alt text](image-194.png)
+- ![alt text](image-195.png)
+- ![alt text](image-196.png)
+
+
+## Design a data storage solution for non-relational data
+- ![alt text](image-197.png)
+- ![alt text](image-198.png)
+- ![alt text](image-199.png)
+- ![alt text](image-200.png)
+- ![alt text](image-201.png)
+- ![alt text](image-202.png)
+- ![alt text](image-203.png)
+- ![alt text](image-204.png)
+
+### Capacity Planning
+- ![alt text](image-205.png)
+- Provisioned throughput does support autoscaling
+
+### Using Cosmos DB
+- ![alt text](image-206.png)
+- ![alt text](image-207.png)
+- ![alt text](image-208.png)
+- ![alt text](image-209.png)
+- ![alt text](image-210.png)
+- ![alt text](image-212.png)
+
+### Data Lake Storage
+- ![alt text](image-213.png)
+- ![alt text](image-214.png)
+- ![alt text](image-215.png)
+- ![alt text](image-216.png)
+- ![alt text](image-217.png)
+- ![alt text](image-218.png)
+- ![alt text](image-219.png)
+- To create data lake storage, we need to select a premium storage account and must select Block Blobs
+- ![alt text](image-220.png)
+- This will enable us to enable a hierarchial namespace.
+- Hierarchial namespace is required for data lakes storage
+- ![alt text](image-221.png)
+
+### Understanding Azure Databricks Storage
+- ![alt text](image-222.png)
+- ![alt text](image-223.png)
+- ![alt text](image-224.png)
+- ![alt text](image-225.png)
+- ![alt text](image-226.png)
+
+### Using Azure Synapse(Analytics System that integrates with Azure Datalakes and Azure Databricks)
+- ![alt text](image-227.png)
+- Azure Synapse can help us with Azure Machine Learning and Power BI and Intelligence.
+- Synapse must be added as a resource provider in Azure
+- ![alt text](image-228.png)
+- ![alt text](image-229.png)
+- We need to create a SQL database and server that can work with Azure Synapse.
+- ![alt text](image-230.png)
+- ![alt text](image-231.png)
+- ![alt text](image-232.png)
+- ![alt text](image-233.png)
+- Synapse analytics requires a SQL pool.
+- ![alt text](image-234.png)
+- Azure Databricks: Primarily geared toward data preparation, big data processing, and machine learning model development. It excels in handling large-scale data with Apache Spark, building ETL pipelines, and managing the full ML lifecycle (using MLflow). It’s ideal for data engineers and data scientists focused on creating and deploying ML models, such as demand forecasting or anomaly detection in your supply chain use case.
+- Azure Synapse Analytics: Geared toward end-to-end analytics, including data warehousing, visualization, and key insights. It combines Spark for big data processing with high-performance SQL pools for enterprise-grade querying and reporting, making it a strong choice for business intelligence (BI) and actionable insights via tools like Power BI. It’s better suited for scenarios where SQL-based analytics and dashboards are critical for decision-makers.
+- Key Nuance:
+- Databricks can support visualization (e.g., via notebooks or integration with BI tools), but it’s less optimized for enterprise data warehousing and SQL-heavy reporting compared to Synapse.
+- Synapse can handle ML tasks (via Azure Machine Learning or Spark), but it’s not as streamlined for ML lifecycle management as Databricks.
+- For your supply chain use case, choose Databricks if your focus is on building ML-driven solutions (e.g., predictive models) or Synapse if you need robust data warehousing and BI visualizations for stakeholders. You could also use both together: Databricks for data prep and ML, Synapse for storage and reporting.
+- ![alt text](image-235.png)
+- ![alt text](image-236.png)
+- ![alt text](image-237.png)
+
+### Understanding Azure Data Factory
+- ![alt text](image-238.png)
+- ![alt text](image-239.png)
+- ![alt text](image-240.png)
+- ![alt text](image-241.png)
+- ![alt text](image-242.png)
+- ![alt text](image-243.png)
+- ![alt text](image-244.png)
+- ![alt text](image-245.png)
+- ![alt text](image-246.png)
+- ![alt text](image-247.png)
+- ![alt text](image-248.png)
+- ![alt text](image-249.png)
+- - ADF serves as the glue that connects and coordinates data flows between systems, including Azure Databricks and Azure Synapse Analytics. It ensures data is ingested, transformed, and delivered to the right platforms for processing, analysis, or visualization.
+- Problem: Supply chain data resides in multiple sources (e.g., on-premises ERP systems like SAP, cloud-based CRMs like Salesforce, IoT devices, supplier APIs, or external data like weather APIs), making it hard to consolidate.
+- Solution: ADF connects to a wide range of sources via built-in connectors (over 100+ supported data stores, including SQL Server, Oracle, REST APIs, and Azure services). It ingests raw data into a centralized storage like Azure Data Lake Storage, which can then be accessed by Databricks or Synapse.
+- How It Helps: Automates the extraction of scattered data, ensuring a steady flow of fresh data for real-time or batch processing in your analytics pipeline.
+- Developer Task: Create ADF pipelines using the drag-and-drop UI in ADF Studio to connect to sources, schedule data ingestion, and copy data to Azure Data Lake.
+- Problem: Preparing data for analysis or ML requires complex transformations (e.g., cleaning, aggregating, joining sales and inventory data), which must be coordinated across tools.
+- Solution: ADF orchestrates ETL (Extract-Transform-Load) or ELT (Extract-Load-Transform) workflows. It triggers data transformations in Databricks (e.g., using Spark notebooks for ML prep) or Synapse (e.g., using Data Flows or SQL scripts) and loads the processed data into target systems (e.g., Synapse SQL pools for reporting).
+- How It Helps: Ensures seamless data movement and transformation across your analytics stack, reducing manual effort and errors.
+- Developer Task: Use ADF’s Mapping Data Flows for lightweight transformations or trigger Databricks notebooks/Synapse pipelines within ADF workflows. Define dependencies and schedules to automate the process.
+- Role in the Pipeline: ADF is the orchestrator that feeds data into Databricks and Synapse, triggers their processing jobs, and moves results to downstream systems. It doesn’t perform heavy data processing or analytics itself but coordinates the workflow.
+- With Databricks: ADF ingests raw data into Azure Data Lake, triggers Databricks notebooks for data prep or ML model training (e.g., demand forecasting), and moves processed data (e.g., Delta Lake tables) to Synapse or other stores.
+- With Synapse: ADF is embedded in Synapse Studio, allowing seamless orchestration of Synapse’s Data Flows, SQL scripts, or Spark jobs. It also loads processed data into Synapse’s SQL pools for BI reporting or Power BI dashboards.
+- Example Workflow:
+- ADF ingests sales, inventory, and supplier data into Azure Data Lake.
+- ADF triggers a Databricks notebook to preprocess data and train an ML model for demand forecasting.
+- ADF moves the processed data and model predictions to Synapse’s SQL pool.
+- Synapse generates reports, and ADF triggers Power BI refresh for stakeholder dashboards.
+
+### Using Azure Data Factory for copying data into Azure Synapse Analytics
+- ![alt text](image-250.png)
+- ![alt text](image-251.png)
+- ![alt text](image-252.png)
+- ![alt text](image-253.png)
+- ![alt text](image-254.png)
+- ![alt text](image-255.png)
+- ![alt text](image-256.png)
+- ![alt text](image-257.png)
+- ![alt text](image-258.png)
+
+## Design a solution for backup and disaster recovery
+- ![alt text](image-260.png)
+
+### Using Recovery Services Vault
+- ![alt text](image-261.png)
+- It has 2 main sections: Backup and Site Recovery
+- ![alt text](image-262.png)
+- ![alt text](image-263.png)
+- ![alt text](image-264.png)
+- In Azure Site Recovery, we can setup VM replication
+
+### Backup policies for RTO and RPO
+- ![alt text](image-265.png)
+- We can create our custom backup policies
+- ![alt text](image-266.png)
+- ![alt text](image-267.png)
+
+### Implementing Azure Backup for storage and compute resources
+- There are 2 ways of doing backups: snapshots and backup
+- ![alt text](image-268.png)
+- ![alt text](image-269.png)
+- We have more options in Recovery Services Vault
+- ![alt text](image-270.png)
+- ![alt text](image-271.png)
+- ![alt text](image-272.png)
+- For VMs we can backup like this
+- ![alt text](image-273.png)
+- ![alt text](image-274.png)
+- We can view the backup logs like this
+- ![alt text](image-275.png)
+- ![alt text](image-276.png)
+- ![alt text](image-277.png)
+- We can also view the backup jobs like this
+- ![alt text](image-278.png)
+- Similarly we can look at Site Recovery Jobs
+
+
+## Design for High Availability
+- We can make use of availability zones
+- Each availability zone has its own power, networking and cooling
+- Availability zones have very fast replication
+- Synchronous replication is possible
+- ![alt text](image-279.png)
+- ![alt text](image-280.png)
+- Availability zones protect us from data center outage not from regional outage
+
+### Azure Site Recovery
+- ![alt text](image-281.png)
+- ![alt text](image-282.png)
+- ![alt text](image-283.png)
+- ![alt text](image-284.png)
+- ![alt text](image-285.png)
+- ![alt text](image-286.png)
+- ![alt text](image-287.png)
+- ![alt text](image-288.png)
+- ![alt text](image-289.png)
+- We can create recovery plans inside azure site recovery
+- ![alt text](image-290.png)
+- ![alt text](image-291.png)
+- ![alt text](image-292.png)
+- One example of recovery plan is like this
+- ![alt text](image-293.png)
+- ![alt text](image-294.png)
+- We can enable replication of VMs
+- ![alt text](image-295.png)
+- ![alt text](image-296.png)
+- ![alt text](image-297.png)
+- ![alt text](image-298.png)
+- ![alt text](image-299.png)
+
+### Replicating Data Storage to provide high availability
+- We have option of object replication to replicate data between storage accounts
+- ![alt text](image-300.png)
+- ![alt text](image-301.png)
+- ![alt text](image-302.png)
+
+## Design compute solutions
