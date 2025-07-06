@@ -519,3 +519,278 @@
 - ![alt text](image-302.png)
 
 ## Design compute solutions
+- For users who want Windows OS in the cloud, we have option of Windows 365.
+- We can have a thin client connecting to the cloud and then host Windows in the cloud and that machine can stream to the thin client.
+- This allows us to have a powerful machine at a low cost.
+- Another option is Azure Virtual Desktop. This allows us to setup host pools.
+- ![alt text](image-303.png)
+- We can have a bunch of virtual machines in a pool and the user data can also be saved in the cloud.
+- This is very useful for mid/large scale businesses.
+- For smaller businesses, Windows 365 is a better solution.
+- ![alt text](image-304.png)
+- ![alt text](image-305.png)
+- ![alt text](image-306.png)
+- ![alt text](image-307.png)
+- ![alt text](image-308.png)
+
+
+### Understanding container based compute solutions(like AKS, ACI, Container Apps)
+- ![alt text](image-309.png)
+- Azure supports Windows Based and Linux based containers
+- ![alt text](image-310.png)
+- ![alt text](image-311.png)
+- ![alt text](image-312.png)
+- ![alt text](image-313.png)
+- ![alt text](image-314.png)
+- ![alt text](image-315.png)
+- ![alt text](image-316.png)
+- ![alt text](image-317.png)
+- ![alt text](image-318.png)
+- ![alt text](image-319.png)
+- ![alt text](image-320.png)
+- ![alt text](image-321.png)
+
+### Using AKS and AKS scaling
+- ![alt text](image-322.png)
+- ![alt text](image-323.png)
+- ![alt text](image-324.png)
+- ![alt text](image-325.png)
+- ACI deploys faster than AKS
+- ACI is more suitable for burstable workloads
+- Azure Container Groups (via ACI) are not obsolete; they serve a distinct and valuable purpose for specific, often simpler or burstable, container workloads. The "better alternative" depends entirely on your application's requirements regarding complexity, scalability, orchestration needs, and the level of infrastructure management you want to handle. Many organizations use a combination of these services to optimize for different parts of their architecture.
+- ![alt text](image-326.png)
+- ![alt text](image-327.png)
+- ![alt text](image-328.png)
+- ![alt text](image-329.png)
+- ![alt text](image-330.png)
+- ![alt text](image-331.png)
+- ![alt text](image-332.png)
+- ![alt text](image-333.png)
+- ![alt text](image-335.png)
+- ![alt text](image-336.png)
+- ![alt text](image-337.png)
+- ![alt text](image-338.png)
+- ![alt text](image-340.png)
+
+
+## Designing Application Architecture
+- ![alt text](image-341.png)
+- ![alt text](image-342.png)
+- ![alt text](image-343.png)
+- ![alt text](image-344.png)
+- ![alt text](image-345.png)
+- ![alt text](image-346.png)
+- ![alt text](image-347.png)
+- For managing application development we have Azure Devops
+- ![alt text](image-348.png)
+- ![alt text](image-349.png)
+- ![alt text](image-350.png)
+- ![alt text](image-351.png)
+- ![alt text](image-352.png)
+- ![alt text](image-353.png)
+- ![alt text](image-354.png)
+- ![alt text](image-355.png)
+- ![alt text](image-356.png)
+- ![alt text](image-357.png)
+- ![alt text](image-358.png)
+- ![alt text](image-359.png)
+- ![alt text](image-360.png)
+- ![alt text](image-361.png)
+- ![alt text](image-362.png)
+- ![alt text](image-363.png)
+- ![alt text](image-364.png)
+
+### Deploying a Devops application to Azure App Service
+- ![alt text](image-365.png)
+- ![alt text](image-366.png)
+- ![alt text](image-367.png)
+- ![alt text](image-368.png)
+- ![alt text](image-369.png)
+- ![alt text](image-370.png)
+- ![alt text](image-371.png)
+- ![alt text](image-372.png)
+- ![alt text](image-373.png)
+- ![alt text](image-374.png)
+- ![alt text](image-375.png)
+- Scale Up is a choosing a different App Service Plan and Scale Out utilizes autoscaling to increase instance counts.
+- ![alt text](image-376.png)
+- ![alt text](image-377.png)
+- ![alt text](image-378.png)
+- ![alt text](image-379.png)
+- We can create an App Service inside an App Service Plan
+- ![alt text](image-380.png)
+- ![alt text](image-381.png)
+- ![alt text](image-382.png)
+- ![alt text](image-383.png)
+- ![alt text](image-384.png)
+- ![alt text](image-385.png)
+- Private endpoints help to connect App Service to a Vnet
+- ![alt text](image-386.png)
+- ![alt text](image-387.png)
+- In the context of Azure App Services, Hybrid Connections is a feature that allows an Azure App Service (such as a web app, API app, or mobile app) to securely connect to on-premises resources or resources in a private network (e.g., databases, file servers, or services) without requiring a VPN or exposing those resources to the public internet. It provides a way to integrate cloud-based applications with on-premises systems.
+- A lightweight agent called the Hybrid Connection Manager is installed on a Windows machine in the on-premises network.
+- The HCM facilitates the connection between the Azure App Service and the on-premises resource by relaying traffic through Azure's Service Bus Relay.
+- ![alt text](image-388.png)
+- ![alt text](image-389.png)
+- ![alt text](image-390.png)
+- ![alt text](image-391.png)
+- Go to the custom DNS provider(like GoDaddy) and add the TXT record to validate the domain name
+- ![alt text](image-392.png)
+- ![alt text](image-393.png)
+- ![alt text](image-394.png)
+
+### Azure API Management
+- ![alt text](image-395.png)
+- ![alt text](image-396.png)
+- ![alt text](image-397.png)
+- ![alt text](image-398.png)
+- ![alt text](image-399.png)
+- ![alt text](image-400.png)
+
+## Designing Migrations in Azure
+- ![alt text](image-401.png)
+- Rebuild Migration needs to be done when we have out of date software and out of date web applications
+- For re-architecting migrations we can make use of microservices.
+- Microservices help to provide redundancy and high availability.
+- Most common solution is refactoring. Here we make use of PaaS solutions. Rather than hosting the web application inside a VM, we can make use of serverless solutions.
+- Lift and shift is just to move the VM from on-prem to Azure. Here we can make use of tools like AzCopy
+
+### Using import and export jobs
+- What if we want to move 500TB of data to the cloud.
+- We can make use of Azure Databox and create an import/export job
+- ![alt text](image-402.png)
+- ![alt text](image-403.png)
+- ![alt text](image-404.png)
+- To ensure integrity of data, we generate a journal *.jrn file using the WAImportExport Tool
+- ![alt text](image-405.png)
+
+### Using Azure Storage Explorer and AzCopy
+- We can download Azure Storage Explorer tool to upload data to our storage account
+- ![alt text](image-406.png)
+- ![alt text](image-407.png)
+- AzCopy is a command line tool which can be used to upload files to Azure
+- We need to specify SAS token for AzCopy to work
+- ![alt text](image-408.png)
+- ![alt text](image-409.png)
+
+### Migrating from a SQL Server Database to Azure SQL Database
+- We will first create SQL Server on a VM and an Azure SQL Database
+- We will make use of Azure Database Migration Service
+- ![alt text](image-410.png)
+- ![alt text](image-411.png)
+- We will install Azure Data Studio
+- We will install the Azure SQL Migration Extension
+- ![alt text](image-412.png)
+- ![alt text](image-413.png)
+- ![alt text](image-414.png)
+- ![alt text](image-415.png)
+- ![alt text](image-416.png)
+- ![alt text](image-417.png)
+- ![alt text](image-418.png)
+- ![alt text](image-419.png)
+- Register the Microsoft.DataMigration ResourceProvider Service in Azure Subscription
+- ![alt text](image-420.png)
+- Install the Microsoft Integration Runtime
+- ![alt text](image-421.png)
+- ![alt text](image-422.png)
+- ![alt text](image-423.png)
+- ![alt text](image-424.png)
+- ![alt text](image-425.png)
+- ![alt text](image-426.png)
+- ![alt text](image-427.png)
+
+## Design Network Solutions in Azure
+- We can place an NSG on either a Vnet or Subnet
+- We can have a hub and spoke model where all traffic from internet comes on one Hub Vnet and there are other Vnets which protect other Azure resources.
+- We need to make sure there are no address space conflicts between the on-prem network and the connected Azure Vnets
+- Subnets in the same Vnet can talk to each other
+- For communicating between Vnets we use peering
+- Hub Vnet can have the Azure Firewall
+- For other Vnets to filter traffic we can use NSGs
+- Azure Firewall is also a virtual appliance
+- We can also use UDR(user defined routes) to direct traffic through something
+- ![alt text](image-428.png)
+- ![alt text](image-429.png)
+- Some services require their own subnets
+- Examples include VPN Gateway,ExpressRoute, Azure Application Gateway
+- ![alt text](image-430.png)
+- ![alt text](image-431.png)
+- We can delegate subnets to some Azure Services
+- Subnet delegation in Azure is needed to dedicate a subnet to a specific Azure service, granting that service explicit control over the subnet's resources. Here's why it's important:
+- Service-Specific Management: Some Azure services, like Azure App Service Environment or Azure Kubernetes Service (AKS), require dedicated subnets to operate. Delegation ensures the service can manage network configurations, such as IP address allocation, without interference from other resources.
+- Improved Security: By delegating a subnet to a single service, you isolate its network traffic and configurations, reducing the risk of misconfiguration or unauthorized access from other resources in the virtual network (VNet).
+- Compliance with Service Requirements: Certain Azure services mandate subnet delegation to function correctly. For example, Azure SQL Managed Instance requires a delegated subnet to enforce specific network policies and ensure high availability.
+- Simplified Network Management: Delegation allows the Azure service to handle subnet-specific settings, reducing the administrative burden on you to manually configure and maintain network rules or IP assignments.
+- Enhanced Integration: Delegated subnets enable seamless integration with Azure services, ensuring they can leverage VNet features like network security groups (NSGs), user-defined routes (UDRs), or private endpoints while maintaining service-specific optimizations.
+- ![alt text](image-432.png)
+- A Public IP Prefix in Azure is a reserved range of contiguous public IP addresses allocated from Azure's public IP address pool. It allows you to assign multiple public IPs from a single, predictable block to your Azure resources. Here's a concise overview:
+
+- Purpose: Ensures consistent and predictable IP addresses for resources like virtual machines, load balancers, or application gateways, simplifying management and reducing IP fragmentation.
+Key Features:
+- Contiguous IPs: You get a range (e.g., /28 prefix provides 16 IPs) of sequential public IPs.
+- Static or Dynamic: IPs from the prefix can be assigned as static (fixed) or dynamic (changeable) to resources.
+Simplified Whitelisting: Using a prefix range (e.g., 203.0.113.0/28) is easier for firewall rules or external systems than managing individual IPs.
+- Use Cases:
+- Scaling applications requiring multiple public IPs (e.g., load balancers for high availability).
+- Environments needing consistent IPs for external connectivity or compliance.
+- Simplifying network configurations for large deployments.
+- Availability: Supported in all Azure regions, with prefix sizes ranging from /31 (2 IPs) to /24 (256 IPs), depending on the service and region.
+- Public IP Prefixes streamline IP management, enhance reliability, and improve control over public-facing Azure resources.
+- ![alt text](image-433.png)
+- ![alt text](image-434.png)
+- ![alt text](image-435.png)
+- ![alt text](image-436.png)
+- ![alt text](image-437.png)
+- ![alt text](image-438.png)
+- ![alt text](image-439.png)
+- ![alt text](image-440.png)
+- ![alt text](image-441.png)
+- ![alt text](image-442.png)
+- ![alt text](image-443.png)
+- ![alt text](image-444.png)
+
+
+### Understanding how NSG and ASG help optimize network security
+- NSGs/ASGs help us with IP filtering
+- NSG can be placed on a subnet or a virtual NIC directly
+- In NSGs, the most restrictive NSG rule always wins. DENY always wins over ALLOW
+- Microsoft recommends not to have lot of NSGs
+- Some VMs may have multiple vNICs
+- ASG --> Application Security Group
+- ASG can be associated over a VM and can be applied over multiple vNICs
+
+
+### Azure Firewall
+- ![alt text](image-445.png)
+- ![alt text](image-446.png)
+- ![alt text](image-447.png)
+- ![alt text](image-448.png)
+- ![alt text](image-449.png)
+- ![alt text](image-450.png)
+- ![alt text](image-451.png)
+- Azure resources dont automatically start using the Azure firewall. We have to make a route table and have user defined routes so that we can make the incoming traffic flow through the firewall.
+- ![alt text](image-452.png)
+- ![alt text](image-453.png)
+- ![alt text](image-454.png)
+- ![alt text](image-455.png)
+- ![alt text](image-456.png)
+- We need to associate the route with the subnet containing our VMs
+- ![alt text](image-457.png)
+
+### Understanding Azure Load Balancing Solutions
+- ![alt text](image-458.png)
+- In OSI Model, the higher the layer number, the more intelligent it is and has more capabilities.
+- Application Gateway is more expensive than Layer 4 Load Balancer.
+- In Load balancers, we have health probes that monitor the VMs
+- Application GW can do the same thing as regular load balancers but we can also do URL based load balancing.
+- ![alt text](image-459.png)
+- We can do load balancing based on DNS names, folder names etc in Application GW.
+- ![alt text](image-461.png)
+- ![alt text](image-462.png)
+- ![alt text](image-463.png)
+- ![alt text](image-464.png)
+
+### Using Health Probes in Load Balancer
+- ![alt text](image-465.png)
+- ![alt text](image-466.png)
+- ![alt text](image-467.png)
